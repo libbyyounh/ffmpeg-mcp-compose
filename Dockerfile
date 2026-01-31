@@ -29,7 +29,7 @@ RUN git clone https://ghproxy.net/https://github.com/video-creator/ffmpeg-mcp.gi
 RUN uv sync --frozen
 
 # 暴露端口
-EXPOSE 8000
+EXPOSE 8032
 
 # 启动命令
-CMD ["uv", "run", "ffmpeg-mcp", "--transport", "sse", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "ffmpeg-mcp", "--transport", "sse", "--host", "0.0.0.0", "--port", "8032"]
