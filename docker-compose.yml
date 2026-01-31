@@ -5,11 +5,11 @@ services:
     build: .
     container_name: ffmpeg-mcp-server
     ports:
-      - "8000:8000"
+      - "8032:8032"
     volumes:
       # 【关键】将你存放视频的宿主机目录映射到容器内
       # 这样 MCP 才能处理这些文件。建议映射到 /videos
-      - /your/host/video/path:/videos
+      - ./videos:/videos
     environment:
       - FFMPEG_PATH=/usr/bin/ffmpeg
       - FFPROBE_PATH=/usr/bin/ffprobe
