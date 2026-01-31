@@ -5,10 +5,12 @@ services:
     ports:
       - "8032:8032"
     volumes:
-      # 【关键】将你存放视频的宿主机目录映射到容器内
-      # 这样 MCP 才能处理这些文件。建议映射到 /videos
+      # 请确保左侧路径正确
       - ./videos:/videos
-    environment:
-      - FFMPEG_PATH=/usr/bin/ffmpeg
-      - FFPROBE_PATH=/usr/bin/ffprobe
+    networks:
+      - app-network
     restart: always
+
+networks:
+  app-network:
+    external: true
