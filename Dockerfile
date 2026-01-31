@@ -18,7 +18,7 @@ RUN pip install uv -i https://pypi.tuna.tsinghua.edu.cn/simple
 WORKDIR /app
 
 # 4. 克隆仓库 (使用 ghproxy 加速)
-RUN git clone https://ghproxy.net/https://github.com/video-creator/ffmpeg-mcp.git .
+RUN git clone https://github.com/video-creator/ffmpeg-mcp.git .
 
 # 5. 安装依赖 (配置 uv 内部也使用清华源)
 ENV UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
