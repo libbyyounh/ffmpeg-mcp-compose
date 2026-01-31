@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y ffmpeg curl git && rm -rf /var/lib/apt/
 RUN pip install uv -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 WORKDIR /app
-RUN git clone https://ghproxy.net/https://github.com/video-creator/ffmpeg-mcp.git .
+RUN git clone https://github.com/video-creator/ffmpeg-mcp.git .
 
 # 安装依赖
 ENV UV_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
